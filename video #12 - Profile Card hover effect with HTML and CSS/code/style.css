@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #1f1f1f;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.border {
+  height: 369px;
+  width: 290px;
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
+}
+
+.border:hover {
+  border: 1px solid #fff;
+}
+
+.card {
+  height: 379px;
+  width: 300px;
+  border-radius: 10px;
+  transition: background 0.8s;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 70px 63px -60px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.profile {
+  background: url("https://i.pinimg.com/originals/62/7f/59/627f59f3cab890c897b0e728676d5e3e.jpg") center center no-repeat;
+  background-size: 300px;
+}
+
+.profile:hover{
+  background: url("https://i.pinimg.com/originals/62/7f/59/627f59f3cab890c897b0e728676d5e3e.jpg") left center no-repeat;
+  background-size: 600px;
+}
+
+.profile:hover h2{
+  opacity: 1;
+}
+
+.profile:hover .fa {
+  opacity: 1;
+}
+
+h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.fa {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.icons {
+  position: absolute;
+  fill: #fff;
+  color: #fff;
+  height: 130px;
+  top: 226px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}

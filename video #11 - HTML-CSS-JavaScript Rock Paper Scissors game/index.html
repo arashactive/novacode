@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Game ( Rock | Paper | Scissors ) HTML & CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body onload="newGame()">
+    <br>
+    <br>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <div class="board">
+            <p><i class="fas fa-user"></i> <span id="score_a"></span></p>
+            <p><i class="fas fa-computer"></i> <span id="score_b"></span></p>
+            <button class="btn" onclick="newGame()">New game</button>
+        </div>
+    </div>
+
+    <div class="game_container">
+        <div id="pedra" onclick="pickOption(1)">
+            <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/hand-rock-o-512.png">
+            <span>Rock</span>
+        </div>
+        <div id="papel" onclick="pickOption(2)">
+            <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/hand-stop-o-512.png">
+            <span>Paper</span>
+        </div>
+        <div id="tesoura" onclick="pickOption(3)">
+            <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/hand-scissors-o-512.png">
+            <span>Scissors</span>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>

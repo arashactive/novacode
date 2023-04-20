@@ -1,0 +1,121 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(90deg, #330033, #6600cc);
+    font-family: sans-serif;
+    font-size: 16px;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    font-weight: 700;
+    color: #ccc;
+    font-size: 26px;
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.board {
+    height: 10vh;
+    display: flex;
+    color: #ccc;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.board p {
+    width: 30%;
+}
+
+.board p i {
+    margin-right: 5px;
+}
+
+
+.board .btn {
+    position: relative;
+    background: transparent;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #888;
+    border-radius: 5px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.board .btn:hover {
+    color: #330033;
+    background: #ccc;
+}
+
+.game_container {
+    background: #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #888;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: center;
+    user-select: none;
+}
+
+.game_container>div {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    width: calc(100% / 3 - 10px * 2 - 4px - 10px * 2);
+    overflow: hidden;
+    border-radius: 5px;
+    transition: all .5s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.game_container > div:hover{
+    background: #ccc;
+    box-shadow: 0 0 20px #888;
+    transform: scale(1.02);
+}
+
+.game_container>div>img {
+    width: 80%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.game_container>div>span {
+    font-size: 32px;
+    font-weight: bold;
+    display: block;
+    font-size: 18px;
+}
+
+.game_container .player {
+    background: #51f93e !important;
+    box-shadow: 0 0 20px #888;
+    transform: scale(1.02);
+}
+
+.game_container .computer {
+    background: #ff2121 !important;
+    box-shadow: 0 0 20px #888;
+    transform: scale(1.02);
+}
