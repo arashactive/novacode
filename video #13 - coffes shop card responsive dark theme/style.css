@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --secondary: linear-gradient(221deg, #8743ff, #4136f1 60%);
+    --body: #eaf2ff;
+    --card: #fff;
+    --text: #000;
+    --price: #4136f1;
+}
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: var(--body);
+    transition: background 0.3s;
+    gap: 20px;
+}
+
+body.dark {
+    --body: #171717;
+    --text: #fff;
+    --card: #0d0d0d;
+    --price: #8743ff;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: var(--secondary);
+    color: #fff;
+    transition: background 0.3s;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.card {
+    height: 240px;
+    width: 180px;
+    background: var(--card);
+    border-radius: 20px;
+    padding: 10px;
+    font-family: sans-serif;
+    display: flex;
+    color: var(--text);
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.09);
+}
+
+.card img {
+    width: 160px;
+    height: 120px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.card__title {
+    color: var(--text);
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.card__description {
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+    opacity: 0.6;
+    transition: color 0.3s;
+}
+
+.card__shop {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__shop__price {
+    color: var(--price);
+}
+
+.card__shop__action{
+    height: 40px;
+    width: 40px;
+    outline: none;
+    border: none;
+    background: var(--secondary);
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.card__shop__action i {
+    color: #fff;
+    font-size: 16px;
+}
