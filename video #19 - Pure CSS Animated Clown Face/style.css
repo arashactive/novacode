@@ -1,0 +1,137 @@
+body {
+    background-color: #2A3A4A;
+}
+
+.ghost {
+    width: 150px;
+    height: 180px;
+    background-color: white;
+    margin: auto;
+    border-top-left-radius: 110px;
+    border-top-right-radius: 110px;
+    border-bottom: 0;
+    position: relative;
+    margin-top: 15%;
+    -webkit-animation: float 3s linear infinite;
+    animation: float 3s linear infinite;
+}
+
+
+@-webkit-keyframes float {
+    0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    50% {
+        -webkit-transform: translateY(300px);
+        transform: translateY(300px);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes float {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.eye {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #2a3a4a;
+    position: absolute;
+}
+
+.eye.left {
+    top: 50px;
+    left: 30px;
+}
+
+.eye.right {
+    top: 50px;
+    right: 30px;
+}
+
+.arm {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    position: absolute;
+    border-top: 0;
+    bottom: 70px;
+}
+
+.arm.left {
+    border-top-left-radius: 110px;
+    border-bottom-left-radius: 110px;
+    left: -20px;
+}
+
+.arm.right {
+    border-top-right-radius: 110px;
+    border-bottom-right-radius: 110px;
+    right: -20px;
+}
+
+.mounth {
+    width: 40px;
+    height: 20px;
+    background-color: #2A3A4A;
+    position: absolute;
+    border-bottom-left-radius: 110px;
+    border-bottom-right-radius: 110px;
+    border-top: 0;
+    bottom: 70px;
+    left: 55px;
+}
+
+.bottom {
+    width: 37.5px;
+    height: 30px;
+    background-color: #fff;
+    position: absolute;
+    border-top: 0;
+    border-bottom-left-radius: 110px;
+    border-bottom-right-radius: 110px;
+    bottom: -15px;
+}
+
+.bottom.one {
+    left: 0px;
+}
+
+.bottom.two {
+    left: 37.5px;
+}
+
+.bottom.three {
+    left: 75px;
+}
+
+.bottom.four {
+    left: 112.5px;
+}

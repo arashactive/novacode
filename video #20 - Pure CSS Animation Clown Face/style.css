@@ -1,0 +1,172 @@
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 70px 70px 80px 1fr;
+    grid-template-rows: 1fr 80px 90px 70px 2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-content: center;
+    grid-template-areas:
+        "head head head head head"
+        ". eye-1 . eye-2 ."
+        ". cheek-1 nose cheek-2 ."
+        ". mouth mouth mouth ."
+        ". . . . .";
+}
+
+.nose {
+    grid-area: nose;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.eye {
+    display: grid;
+    place-content: center;
+    height: 70px;
+    background: white;
+}
+
+.eye-1 {
+    grid-area: eye-1;
+    border: 12px solid #529a91;
+    animation: changeMood2 1s infinite alternate;
+}
+
+.eye-2 {
+    grid-area: eye-2;
+    border: 12px solid #529a91;
+    animation: changeMood3 1s infinite alternate;
+}
+
+.cheek-1 {
+    grid-area: cheek-1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: pink;
+    position: absolute;
+    z-index: -2;
+    left: -20px;
+}
+
+.cheek-2 {
+    grid-area: cheek-2;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: pink;
+    position: absolute;
+    z-index: -2;
+    right: -40px;
+}
+
+
+.mouth {
+    grid-area: mouth;
+    width: 200px;
+    height: 100px;
+    border: 20px solid #bb86e9;
+    animation: changeMood 1s infinite alternate;
+}
+
+.pupil {
+    background: #191819;
+    height: 50px;
+    width: 20px;
+    border-radius: 50%;
+    animation: pupil 1s infinite alternate;
+}
+
+
+@keyframes pupil {
+    0% {
+        transform: translate(0, -10px);
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0,14px);
+    }
+}
+
+@keyframes changeMood {
+    0%{
+        border-radius: 100px 100px 0 0 ;
+    }
+    50%{
+        border-top-left-radius: 50px 50px;
+        border-top-right-radius: 50px 50px;
+        border-bottom-left-radius: 50px 50px;
+        border-bottom-right-radius: 50px 50px;
+    }
+    100%{
+        border-radius: 0 0 100px 100px;
+    }
+}
+
+
+@keyframes changeMood2 {
+    0% {
+        height: 100%;
+        border-radius: 50%;
+    }
+    50% {
+        border-radius: 49% 51% 52% 48% / 45% 46% 54% 55%;
+    }
+    100% {
+        height: 120%;
+        border-radius: 49% 51% 52% 48% / 82% 61% 39% 18%;
+    }
+}
+
+@keyframes changeMood3 {
+    0% {
+        height: 100%;
+        border-radius: 50%;
+    }
+    50% {
+        border-radius: 49% 51% 52% 48% / 48% 48% 52% 52%;
+    }
+    100% {
+        height: 120%;
+        border-radius: 49% 51% 52% 48% / 48% 80% 20% 52%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html,
+body,
+.container {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: #191819;
+}
+
+.container * {
+    position: relative;
+}

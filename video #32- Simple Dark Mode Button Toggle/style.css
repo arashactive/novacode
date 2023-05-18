@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --back: #eaf2ff;
+    --color: #000;
+    --primary: #4136f1;
+}
+
+body {
+    padding: 20px;
+    background-color: var(--back);
+}
+
+body.dark {
+    --back: #171717;
+    --color: #fff;
+    --primary: #0d0d0d;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: var(--color);
+}
+
+p {
+    color: var(--color);
+}
+
+.btn {
+    height: 45px;
+    padding: 10px;
+    background-color: var(--primary);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
